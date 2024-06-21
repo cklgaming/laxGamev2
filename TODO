@@ -1,0 +1,4 @@
+- Expand decider
+- Add more players
+    - Move players from simple variables to classes
+- Add score, game conditions

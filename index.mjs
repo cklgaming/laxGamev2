@@ -11,14 +11,24 @@ const defenseRating = prompt(`Input the rating of the defender`);
 const goalieName = prompt(`Input the name of the goalie`);
 const goalieRating = prompt(`Input the rating of the goalie`);
 
+const ratings = [attackRating, defenseRating, goalieRating];
+
 p1.innerText = `${attackName}, ${attackRating}, ${defenseName}, ${defenseRating}, ${goalieName}, ${goalieRating}`;
+button1.innerText = "Start Game";
 button1.onclick = startGame;
 
 function startGame() {
+    randomize();
     if (attackRating > defenseRating) {
         p1.innerText = `Goal! ${attackName}'s shot hit the back of the net!`;
     }
     else if (attackRating < defenseRating) {
         p1.innerText = `Shut down! ${defenseName} locked up the attacker and the shot clock expired!`;
+    }
+}
+
+function randomize() {
+    for (let i = 0; i < ratings.length; i++) {
+        ratings[i] = Math.floor(ratings[i] * Math.random() * (1.1 - 0.7) + 0.7);
     }
 }
