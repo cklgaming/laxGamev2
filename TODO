@@ -1,4 +1,11 @@
 - Expand decider
+    - Add random element
+    - Add five point decider
+        - penalty
+        - turnover
+        - shot (player)
+        - shot type
+        - shot result (make/miss, out of bounds or rebounded)
 - Add more players
     - Move players from simple variables to classes
 - Add score, game conditions
